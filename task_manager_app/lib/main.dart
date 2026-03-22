@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'student_registration_screen.dart';
 import 'home_page.dart';
 import 'services/api_service.dart';
+
 
 
 void main() {
@@ -19,6 +21,7 @@ class TaskManagerApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomePage(),
+      // home: const StudentRegistrationScreen(),
     );
   }
 }

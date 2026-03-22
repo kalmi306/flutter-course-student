@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'services/student_registration_screen.dart';
 import 'services/api_service.dart';
+=======
+import 'student_registration_screen.dart';
+import 'servises/api_service.dart';
+>>>>>>> 8e7a073c25a825243fec0aa0ffae9b94a6b6b9cd
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -48,7 +53,7 @@ class HomePage extends StatelessWidget {
 
                   const SizedBox(height: 30),
 
-                  // 🔘 BUTTON
+                  // BUTTON
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -94,12 +99,15 @@ class HomePage extends StatelessWidget {
 
           
                 return ListView.builder(
-                  itemCount: data.length > 5 ? 4 : data.length,
+                  itemCount: data.length > 5 ? 5 : data.length,
                   itemBuilder: (context, index) {
                     return Card(
                       margin: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 5),
                       child: ListTile(
+                        leading: CircleAvatar(
+                          child: Text(data[index]['id'].toString()),
+                        ),
                         title: Text(data[index]['title']),
                         subtitle: Text(data[index]['body']),
                       ),
